@@ -14,7 +14,7 @@ const content = (selector, content = '', html = false, byId = true) => {
   const el = $(selector, byId);
   if (el)  html ? el.innerHTML = content : el.textContent = content;
 }
-const callApi = (data, url = null) =>
+const fetchJson = (data, url = null) =>
   fetch(url || window.location.href, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
